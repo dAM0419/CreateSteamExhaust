@@ -73,7 +73,7 @@ public final class SteamExhaustTicker {
         int interval = SEConfig.searchIntervalTicks();
         long phase = Math.floorMod(be.getBlockPos().hashCode(), interval);
         if (st.search == null || (now + phase) % interval == 0 || now - st.lastSearchTick > interval * 2L) {
-            SteamSearch.Result found = SteamSearch.run(level, be, BoilerGeometry.of(level, be), 0, Set.of());
+            SteamSearch.Result found = SteamSearch.run(level, be, BoilerGeometry.cached(level, be), 0, Set.of());
             st.lastSearchTick = now;
             if (found.unknown && st.search != null) {
                 st.unknown = true; // 직전 구조와 처리량을 유지한다 (기획서 8.4)
@@ -483,7 +483,7 @@ public final class SteamExhaustTicker {
     private static void explode(Level level, FluidTankBlockEntity be, SteamState st, int nRaw, SteamSearch.Result result) {
         st.overheat = 0;
         st.overheatRatio = 0;
-        BoilerGeometry geometry = result.geometry != null ? result.geometry : BoilerGeometry.of(level, be);
+        BoilerGeometry geometry = result.geometry != null ? result.geometry : BoilerGeometry.cached(level, be);
         double power = Math.min(SEConfig.maxExplosionPower(), 2.0 + 0.2 * nRaw * Math.sqrt(geometry.size / 4.0));
         Vec3 c = geometry.centre;
         Level.ExplosionInteraction mode = SEConfig.explosionBreaksBlocks()

@@ -216,7 +216,7 @@ public final class SteamSearch {
                         Result downstream = reheaterCache.get(otherPos);
                         if (downstream == null) {
                             Set<BlockPos> nextVisited = new HashSet<>(visited);
-                            downstream = run(level, other, BoilerGeometry.of(level, other), depth + 1, nextVisited);
+                            downstream = run(level, other, BoilerGeometry.cached(level, other), depth + 1, nextVisited);
                             reheaterCache.put(otherPos, downstream);
                             if (downstream.unknown) {
                                 result.unknown = true;
@@ -306,7 +306,7 @@ public final class SteamSearch {
         if (controller.boiler.isActive()) {
             return false;
         }
-        BoilerGeometry geometry = BoilerGeometry.of(level, controller);
+        BoilerGeometry geometry = BoilerGeometry.cached(level, controller);
         for (BlockPos below : geometry.bottomCells) {
             if (!level.isLoaded(below)) {
                 continue;

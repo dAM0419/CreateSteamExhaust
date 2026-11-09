@@ -61,6 +61,11 @@ public final class SteamState {
     public transient int lastSyncHash;
     public transient long lastSyncTick;
     public transient long lastSearchTick = Long.MIN_VALUE;
+    /** 탱크 모양 캐시 (BoilerGeometry.cached). 구조가 바뀌기 전에는 그대로 쓴다. */
+    public transient BoilerGeometry geometry;
+    public transient int geometryWidth;
+    public transient int geometryHeight;
+    public transient net.minecraft.world.level.block.state.BlockState geometryState;
 
     public void resetInactive() {
         applies = false;

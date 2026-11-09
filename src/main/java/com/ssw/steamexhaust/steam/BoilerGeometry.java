@@ -10,12 +10,15 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
 /**
  * 탱크 묶음의 실제 모양. Create 세로 탱크와 Create: Connected 가로 탱크(Fluid Vessel)를 같은 방식으로 다룬다:
  * 컨트롤러를 공유하는 탱크 블록을 모두 모은 뒤, 맨 위 층 바로 위 칸을 윗면, 맨 아래 층 바로 아래 칸을 바닥면으로 본다.
  * 컨트롤러가 어느 모서리에 있든 상관없다.
+ * <p>
+ * 모양은 탱크를 다시 쌓기 전에는 바뀌지 않으므로 {@link #cached}로 보일러 상태에 저장해 두고 재사용한다.
  */
 public final class BoilerGeometry {
     private static final int MAX_CELLS = 4096;
@@ -23,17 +26,44 @@ public final class BoilerGeometry {
     public final BlockPos controller;
     public final List<BlockPos> topCells;
     public final List<BlockPos> bottomCells;
-    public final Set<BlockPos> cells;
     public final Vec3 centre;
     public final int size;
 
-    private BoilerGeometry(BlockPos controller, Set<BlockPos> cells, List<BlockPos> top, List<BlockPos> bottom, Vec3 centre) {
+    private BoilerGeometry(BlockPos controller, int size, List<BlockPos> top, List<BlockPos> bottom, Vec3 centre) {
         this.controller = controller;
-        this.cells = cells;
+        this.size = size;
         this.topCells = top;
         this.bottomCells = bottom;
         this.centre = centre;
-        this.size = cells.size();
+    }
+
+    /**
+     * 저장해 둔 모양을 돌려준다. 너비·높이·컨트롤러 블록 상태가 그대로면 탱크 구성이 같다고 본다.
+     * 일부 칸이 로드되지 않아 칸 수가 탱크 크기와 다르면 저장하지 않는다 (불완전한 모양이 굳지 않게).
+     */
+    public static BoilerGeometry cached(Level level, FluidTankBlockEntity controller) {
+        SteamState st = BoilerHooks.state(controller.boiler);
+        if (st == null) {
+            return of(level, controller);
+        }
+        int width = controller.getWidth();
+        int height = controller.getHeight();
+        BlockState state = controller.getBlockState();
+        BoilerGeometry g = st.geometry;
+        if (g != null && st.geometryWidth == width && st.geometryHeight == height && st.geometryState == state
+                && g.controller.equals(controller.getBlockPos())) {
+            return g;
+        }
+        g = of(level, controller);
+        if (g.size == controller.getTotalTankSize()) {
+            st.geometry = g;
+            st.geometryWidth = width;
+            st.geometryHeight = height;
+            st.geometryState = state;
+        } else {
+            st.geometry = null;
+        }
+        return g;
     }
 
     public static BoilerGeometry of(Level level, FluidTankBlockEntity controller) {
@@ -83,11 +113,6 @@ public final class BoilerGeometry {
             }
         }
         int n = cells.size();
-        return new BoilerGeometry(cpos, cells, top, bottom, new Vec3(sx / n, sy / n, sz / n));
-    }
-
-    /** pos가 이 탱크 묶음의 윗면 칸인지. */
-    public boolean isTopCell(BlockPos pos) {
-        return topCells.contains(pos);
+        return new BoilerGeometry(cpos, n, List.copyOf(top), List.copyOf(bottom), new Vec3(sx / n, sy / n, sz / n));
     }
 }
