@@ -5,7 +5,7 @@
         "axis": "x"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face"
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_x"
       }
     },
     {
@@ -13,7 +13,7 @@
         "axis": "x"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_x",
         "x": 180
       }
     },
@@ -22,7 +22,7 @@
         "axis": "x"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_x",
         "x": 90
       }
     },
@@ -31,7 +31,7 @@
         "axis": "x"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_x",
         "x": 90,
         "y": 180
       }
@@ -105,7 +105,7 @@
         "axis": "y"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_z",
         "x": 90
       }
     },
@@ -114,7 +114,7 @@
         "axis": "y"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_z",
         "x": 90,
         "y": 180
       }
@@ -124,7 +124,7 @@
         "axis": "y"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_z",
         "x": 90,
         "y": 90
       }
@@ -134,7 +134,7 @@
         "axis": "y"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_z",
         "x": 90,
         "y": 270
       }
@@ -199,7 +199,7 @@
         "axis": "z"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face"
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_z"
       }
     },
     {
@@ -207,7 +207,7 @@
         "axis": "z"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_z",
         "x": 180
       }
     },
@@ -216,7 +216,7 @@
         "axis": "z"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_x",
         "x": 90,
         "y": 90
       }
@@ -226,7 +226,7 @@
         "axis": "z"
       },
       "apply": {
-        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face_long_x",
         "x": 90,
         "y": 270
       }

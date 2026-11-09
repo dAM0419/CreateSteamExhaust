@@ -1,6 +1,6 @@
 {
   "textures": {
-    "particle": "steamexhaust:block/exhaust_pipe",
+    "particle": "steamexhaust:block/exhaust_pipe_run",
     "side": "steamexhaust:block/exhaust_pipe"
   },
   "elements": [

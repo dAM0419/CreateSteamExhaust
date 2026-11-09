@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "steamexhaust:block/exhaust_pipe",
-    "side": "steamexhaust:block/exhaust_pipe",
+    "particle": "steamexhaust:block/exhaust_pipe_run",
+    "side": "steamexhaust:block/exhaust_pipe_run",
     "cap": "steamexhaust:block/exhaust_pipe_cap",
     "mouth": "steamexhaust:block/exhaust_pipe_mouth",
     "inner": "steamexhaust:block/exhaust_pipe_inner",
