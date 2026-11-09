@@ -1,0 +1,31 @@
+{
+  "textures": {
+    "particle": "steamexhaust:block/exhaust_pipe",
+    "cap": "steamexhaust:block/exhaust_pipe_cap"
+  },
+  "elements": [
+    {
+      "from": [
+        2,
+        16,
+        2
+      ],
+      "to": [
+        14,
+        16,
+        14
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#cap"
+        }
+      }
+    }
+  ]
+}

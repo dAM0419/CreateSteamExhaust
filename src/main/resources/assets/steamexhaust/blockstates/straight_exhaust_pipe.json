@@ -1,0 +1,296 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "axis": "x"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face"
+      }
+    },
+    {
+      "when": {
+        "axis": "x"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "x"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "x"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "x"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_arm",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "x",
+        "positive": "pipe"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/cap",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "x",
+        "positive": "open"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/mouth",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "x"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_arm",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "axis": "x",
+        "negative": "pipe"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/cap",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "axis": "x",
+        "negative": "open"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/mouth",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "axis": "y"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "y"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "y"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "y"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "axis": "y"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_arm"
+      }
+    },
+    {
+      "when": {
+        "axis": "y",
+        "positive": "pipe"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/cap"
+      }
+    },
+    {
+      "when": {
+        "axis": "y",
+        "positive": "open"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/mouth"
+      }
+    },
+    {
+      "when": {
+        "axis": "y"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_arm",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "y",
+        "negative": "pipe"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/cap",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "y",
+        "negative": "open"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/mouth",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "z"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face"
+      }
+    },
+    {
+      "when": {
+        "axis": "z"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "z"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "z"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_core_face",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "axis": "z"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_arm",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "z",
+        "positive": "pipe"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/cap",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "z",
+        "positive": "open"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/mouth",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "axis": "z"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/straight_arm",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "z",
+        "negative": "pipe"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/cap",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "axis": "z",
+        "negative": "open"
+      },
+      "apply": {
+        "model": "steamexhaust:block/exhaust_pipe/mouth",
+        "x": 90
+      }
+    }
+  ]
+}

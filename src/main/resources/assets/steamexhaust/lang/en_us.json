@@ -1,0 +1,17 @@
+{
+  "block.steamexhaust.exhaust_pipe": "Exhaust Pipe",
+  "block.steamexhaust.straight_exhaust_pipe": "Straight Exhaust Pipe",
+  "steamexhaust.goggles.title": "Exhaust:",
+  "steamexhaust.goggles.exhaust": "Throughput: level %1$s (%2$s mB/t)",
+  "steamexhaust.goggles.status.limited": "Output limited by exhaust",
+  "steamexhaust.goggles.status.headroom": "Exhaust runs up to %s engines at full power",
+  "steamexhaust.goggles.status.no_exhaust": "No exhaust - output stopped, overheating",
+  "steamexhaust.goggles.status.feed_mixed": "Feed water pumped into the exhaust line",
+  "steamexhaust.goggles.status.blocked": "Exhaust outlet blocked",
+  "steamexhaust.goggles.status.distance": "Steam cools before the outlet (too far)",
+  "steamexhaust.goggles.status.pump_stopped": "Condenser pump stopped",
+  "steamexhaust.goggles.status.unknown": "Exhaust line runs into unloaded chunks",
+  "steamexhaust.goggles.status.grace": "Pre-existing boiler: no overheating until vented once",
+  "steamexhaust.goggles.overheat": "Overheat %s%%",
+  "steamexhaust.goggles.recovered": "Condensate return: %s mB/t"
+}

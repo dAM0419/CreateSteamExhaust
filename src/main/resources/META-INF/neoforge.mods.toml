@@ -1,0 +1,61 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="ssw52"
+description='''
+Create addon: boilers must vent their steam. Exhaust pipes on top of fluid tanks release steam,
+limit boiler output by exhaust capacity, recover water through condensers, and overheat when blocked.
+'''
+
+[[mixins]]
+config="steamexhaust.mixins.json"
+
+[[mixins]]
+config="steamexhaust.compat.mixins.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.219,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="create"
+    type="required"
+    versionRange="[6.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="create_connected"
+    type="optional"
+    versionRange="*"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="aeronautics"
+    type="optional"
+    versionRange="*"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="createsmokestacks"
+    type="discouraged"
+    reason="Create: Smoke Stacks also changes boiler steam behaviour; using both may double-limit boilers."
+    versionRange="*"
+    side="BOTH"

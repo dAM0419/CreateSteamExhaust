@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:fluid_pipe"
+    },
+    {
+      "tag": "c:plates/copper"
+    }
+  ],
+  "result": {
+    "id": "steamexhaust:exhaust_pipe",
+    "count": 1
+  }
+}

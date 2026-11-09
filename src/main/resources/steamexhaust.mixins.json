@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.ssw.steamexhaust.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BoilerDataMixin",
+    "FluidTankBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

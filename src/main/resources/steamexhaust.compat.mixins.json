@@ -1,0 +1,15 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.ssw.steamexhaust.mixin.compat",
+  "plugin": "com.ssw.steamexhaust.mixin.compat.CompatMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "VesselBoilerDataMixin",
+    "VesselBlockEntityMixin",
+    "SteamVentBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "block.steamexhaust.exhaust_pipe": "배기 파이프",
+  "block.steamexhaust.straight_exhaust_pipe": "직선 배기 파이프",
+  "steamexhaust.goggles.title": "배기:",
+  "steamexhaust.goggles.exhaust": "처리량: 레벨 %1$s (%2$s mB/틱)",
+  "steamexhaust.goggles.status.limited": "배기 부족으로 출력 제한",
+  "steamexhaust.goggles.status.headroom": "엔진 %s개까지 전부 가동 (더 달면 배기 부족)",
+  "steamexhaust.goggles.status.no_exhaust": "배기 없음 - 출력 정지, 과열 중",
+  "steamexhaust.goggles.status.feed_mixed": "급수 혼입 - 펌프가 배기 라인으로 물을 밀고 있음",
+  "steamexhaust.goggles.status.blocked": "출구 막힘",
+  "steamexhaust.goggles.status.distance": "거리 초과 - 출구에 닿기 전에 증기가 식음",
+  "steamexhaust.goggles.status.pump_stopped": "복수 펌프 정지",
+  "steamexhaust.goggles.status.unknown": "알 수 없음 - 배기 라인이 로드되지 않은 청크에 있음",
+  "steamexhaust.goggles.status.grace": "유예: 기존 보일러 (한 번 배기될 때까지 과열 없음)",
+  "steamexhaust.goggles.overheat": "과열 %s%%",
+  "steamexhaust.goggles.recovered": "복수 회수: %s mB/틱"
+}
