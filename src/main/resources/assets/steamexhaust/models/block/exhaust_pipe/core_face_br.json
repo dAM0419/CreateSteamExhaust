@@ -1,7 +1,7 @@
 {
   "textures": {
     "particle": "steamexhaust:block/exhaust_pipe_run",
-    "side": "steamexhaust:block/exhaust_pipe_run"
+    "side": "steamexhaust:block/exhaust_pipe_core_br"
   },
   "elements": [
     {
@@ -23,8 +23,7 @@
             14,
             14
           ],
-          "texture": "#side",
-          "rotation": 90
+          "texture": "#side"
         }
       }
     }

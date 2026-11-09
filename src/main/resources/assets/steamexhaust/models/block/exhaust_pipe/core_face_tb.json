@@ -1,0 +1,31 @@
+{
+  "textures": {
+    "particle": "steamexhaust:block/exhaust_pipe_run",
+    "side": "steamexhaust:block/exhaust_pipe_core_tb"
+  },
+  "elements": [
+    {
+      "from": [
+        2,
+        14,
+        2
+      ],
+      "to": [
+        14,
+        14,
+        14
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#side"
+        }
+      }
+    }
+  ]
+}
