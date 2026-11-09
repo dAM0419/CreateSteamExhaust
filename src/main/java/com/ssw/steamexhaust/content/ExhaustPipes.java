@@ -47,6 +47,41 @@ public final class ExhaustPipes {
         return SHAPES[extendMask & 63];
     }
 
+    // 말단 플랜지 (0.1.5): 열린 끝은 1~15 폭·3px, Create 파이프 쪽 맹플랜지는 1~15 폭·2px.
+    private static final java.util.Map<BlockState, VoxelShape> STATE_SHAPES = new java.util.concurrent.ConcurrentHashMap<>();
+
+    private static VoxelShape flange(Direction d, int depth) {
+        double a = 16 - depth;
+        return switch (d) {
+            case DOWN -> Block.box(1, 0, 1, 15, depth, 15);
+            case UP -> Block.box(1, a, 1, 15, 16, 15);
+            case NORTH -> Block.box(1, 1, 0, 15, 15, depth);
+            case SOUTH -> Block.box(1, 1, a, 15, 15, 16);
+            case WEST -> Block.box(0, 1, 1, depth, 15, 15);
+            case EAST -> Block.box(a, 1, 1, 16, 15, 15);
+        };
+    }
+
+    /** 몸통·다리에 말단 플랜지까지 더한 모양. 블록 상태 수가 유한하므로 상태별로 저장해 둔다. */
+    public static VoxelShape shape(BlockState state) {
+        return STATE_SHAPES.computeIfAbsent(state, s -> {
+            int mask = 0;
+            VoxelShape flanges = Shapes.empty();
+            for (Direction d : Direction.values()) {
+                ExhaustConnection c = faceOf(s, d);
+                if (c.extends_()) {
+                    mask |= 1 << d.get3DDataValue();
+                }
+                if (c == ExhaustConnection.OPEN) {
+                    flanges = Shapes.or(flanges, flange(d, 3));
+                } else if (c == ExhaustConnection.PIPE) {
+                    flanges = Shapes.or(flanges, flange(d, 2));
+                }
+            }
+            return Shapes.or(shape(mask), flanges).optimize();
+        });
+    }
+
     public static boolean isExhaust(BlockState state) {
         return state.getBlock() instanceof ExhaustPipeBlock || state.getBlock() instanceof StraightExhaustPipeBlock;
     }

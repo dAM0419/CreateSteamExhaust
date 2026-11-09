@@ -122,9 +122,7 @@ public class StraightExhaustPipeBlock extends Block implements EntityBlock, Simp
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        Direction.Axis axis = state.getValue(AXIS);
-        Direction p = Direction.fromAxisAndDirection(axis, Direction.AxisDirection.POSITIVE);
-        return ExhaustPipes.shape((1 << p.get3DDataValue()) | (1 << p.getOpposite().get3DDataValue()));
+        return ExhaustPipes.shape(state);
     }
 
     @Override

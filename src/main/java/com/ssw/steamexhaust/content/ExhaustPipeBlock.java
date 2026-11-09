@@ -201,7 +201,7 @@ public class ExhaustPipeBlock extends Block implements EntityBlock, SimpleWaterl
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return ExhaustPipes.shape(extendMask(state));
+        return ExhaustPipes.shape(state);
     }
 
     @Override
